@@ -2,7 +2,10 @@ package com.rycry.roldepagos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Resultado extends AppCompatActivity {
@@ -53,6 +56,29 @@ public class Resultado extends AppCompatActivity {
 
             TextView edResultadoTotal = findViewById(R.id.edResultadoTotal);
             edResultadoTotal.setText(String.valueOf(totalRecibir));
+
+            Button btnVolver = findViewById(R.id.btnVolver);
+            btnVolver.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Vuelve a la MainActivity
+                    Intent intent = new Intent(Resultado.this, MainActivity.class);
+                    startActivity(intent);
+                    finish(); // Cierra la actividad actual
+                }
+            });
+
+            // Botón "Salir"
+            Button btnSalir = findViewById(R.id.btnSalir);
+            btnSalir.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Sale de la aplicación
+                    finishAffinity(); // Cierra todas las actividades en la pila
+                    System.exit(0); // Cierra la aplicación por completo
+                }
+            });
+
         }
     }
 }
