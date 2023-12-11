@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Definición del tema principal -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Personaliza aquí propiedades específicas del tema -->
+
+        <!-- Color de fondo de la aplicación -->
+        <item name="android:windowBackground">@color/black</item>
+
+        <!-- Color de fondo global de botones -->
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+
+        <!-- Color de texto -->
+        <item name="android:textColor">@android:color/white</item>
+
+        <!-- Color de texto para EditText (plain text) -->
+        <item name="android:editTextColor">@android:color/white</item>
+    </style>
+
+    <!-- Estilo para el color de fondo global de botones -->
+    <style name="ButtonStyle">
+        <item name="android:background">@color/colorButtonBackground</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:background">#000000</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
+    <!-- Color de fondo de botones -->
+    <color name="colorButtonBackground">#76B900</color>
+}
+
+</resources>
